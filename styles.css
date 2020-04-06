@@ -1,0 +1,186 @@
+.game {
+  width: 800px;
+  margin: 0 auto;
+}
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 570px;
+}
+
+
+.preloadImages0 {
+  background-image: url('res/red0.png');
+}
+.preloadImages1 {
+  background-image: url('res/red1.png');
+}
+.preloadImages2 {
+  background-image: url('res/blue0.png');
+}
+.preloadImages3 {
+  background-image: url('res/blue1.png');
+}
+.preloadImages4 {
+  background-image: url('res/white0.png');
+}
+.preloadImages5 {
+  background-image: url('res/white1.png');
+}
+.preloadImages6 {
+  background-image: url('res/black1.png');
+}
+
+
+.team {
+  float: right;
+}
+
+
+.scoreDash {
+  color: black;
+  font-size: 30px;
+}
+.scoreRed {
+  color: #ff4545;
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.scoreBlue {
+  color: #4589ff;
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.darkWinner {
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  display: table;
+  margin: 0 auto;
+}
+.winner {
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: black;
+  display: table;
+  margin: 0 auto;}
+
+
+.card {
+  color: black;
+  text-align: center;
+  background-color: rgb(212, 212, 212);
+  border: 1px solid rgb(197, 197, 197);
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 19%;
+  height: 17.8%;
+}
+.card:hover {
+  border: 1px solid black;
+}
+
+
+.dark {
+  color: #b7babd;
+  background-color: #36393f;
+  border: 1px solid rgb(0, 0, 0);
+}
+.dash {
+  color: black;
+}
+.darkDash {
+  color: #b7babd;
+}
+
+
+.red {
+  font-size: 16px;
+}
+.blue {
+  font-size: 16px;
+}
+.white {
+  font-size: 16px;
+}
+.black {
+  font-size: 16px;
+}
+.visible {
+  color: black
+}
+
+
+.redVisible {
+  background-image: radial-gradient(#c73535, #722020);
+}
+.redVisiblePlayer0 {
+  background-image: url('res/red0.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+.redVisiblePlayer1 {
+  background-image: url('res/red1.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+
+
+.blueVisible {
+  background-image: radial-gradient(#3f77da, #254885);
+}
+.blueVisiblePlayer0 {
+  background-image: url('res/blue0.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+.blueVisiblePlayer1 {
+  background-image: url('res/blue1.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+
+
+.whiteVisible {
+  background-image: radial-gradient( #ffffff, #c0c0c0);
+  color: #c7c7c7;
+}
+.whiteVisiblePlayer0 {
+  background-image: url('res/white0.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+.whiteVisiblePlayer1 {
+  background-image: url('res/white1.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+
+
+.blackVisible {
+  background-image: radial-gradient(#333333, #000000);
+  color: #c7c7c7;
+}
+.blackVisiblePlayer1 {
+  background-image: url('res/black1.png');
+  background-size: contain;
+  color: rgba(255, 255, 255, 0);
+}
+
+
+body {
+  background-color: #202225;
+  overflow: hidden;
+}
