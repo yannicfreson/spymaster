@@ -175,6 +175,7 @@ function hideCardsColor() {
 // HANDLE CLICKS FROM THE USER
 document.addEventListener('click', function (click) {
     // TOGGLE SPYMASTER VIEW
+    document.getElementById('winner').innerHTML = "spymaster";
     if (click.target.classList.contains('button') && click.target.classList.contains('spy') && spy === false) {
         spy = !spy;
         if (spy == true) {
@@ -284,11 +285,14 @@ document.addEventListener('click', function (click) {
         } else if (team == "red") {
             team = "blue";
         }
-        if (male == true) {
-            click.target.classList.add('whiteVisiblePlayer0');
-        } else if (male == false) {
-            click.target.classList.add('whiteVisiblePlayer1');
+        if (!click.target.classList.contains('hasGender')) {
+            if (male == true) {
+                click.target.classList.add('whiteVisiblePlayer0');
+            } else if (male == false) {
+                click.target.classList.add('whiteVisiblePlayer1');
+            }
         }
+        click.target.classList.add('hasGender');
     }
 
     // BLACK
@@ -325,10 +329,12 @@ document.addEventListener('click', function (click) {
 
     // WHITE
     if (click.target.classList.contains('whiteVisible') && spy == true) {
-        if (male == true) {
-            click.target.classList.add('whiteVisiblePlayer0');
-        } else if (male == false) {
-            click.target.classList.add('whiteVisiblePlayer1');
+        if (!click.target.classList.contains('hasGender')) {
+            if (male == true) {
+                click.target.classList.add('whiteVisiblePlayer0');
+            } else if (male == false) {
+                click.target.classList.add('whiteVisiblePlayer1');
+            }
         }
     }
 
