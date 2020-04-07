@@ -55,7 +55,7 @@
 
 
 .darkWinner {
-  font-size: 35px;
+  font-size: 45px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: white;
@@ -63,7 +63,7 @@
   margin: 0 auto;
 }
 .winner {
-  font-size: 35px;
+  font-size: 45px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: black;
@@ -125,6 +125,7 @@
 
 .redVisible {
   background-image: radial-gradient(#c73535, #722020);
+  color: white;
 }
 .redVisiblePlayer0 {
   background-image: url('res/red0.png');
@@ -140,6 +141,7 @@
 
 .blueVisible {
   background-image: radial-gradient(#3f77da, #254885);
+  color: white;
 }
 .blueVisiblePlayer0 {
   background-image: url('res/blue0.png');
@@ -155,7 +157,7 @@
 
 .whiteVisible {
   background-image: radial-gradient( #ffffff, #c0c0c0);
-  color: #c7c7c7;
+  color: #505050;
 }
 .whiteVisiblePlayer0 {
   background-image: url('res/white0.png');

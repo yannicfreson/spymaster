@@ -2,7 +2,7 @@
 
 // WORDLISTS AND ASSIGNMENT OF SHUFFLED ARRAY
 var wordsEng = ["africa", "agent", "air", "alien", "amazon", "angel", "antarctica", "apple", "arm", "back", "band", "bank", "bark", "beach", "belt", "berlin", "berry", "board", "bond", "boom", "bow", "box", "bug", "canada", "capital", "cell", "center", "china", "chocolate", "circle", "club", "compound", "copper", "crash", "cricket", "cross", "death", "dice", "dinosaur", "doctor", "dog", "dress", "dwarf", "eagle", "egypt", "engine", "england", "europe", "eye", "fair", "fall", "fan", "field", "file", "film", "fish", "flute", "fly", "forest", "fork", "france", "gas", "ghost", "giant", "glass", "glove", "gold", "grass", "greece", "green", "ham", "head", "himalaya", "hole", "hood", "hook", "human", "horseshoe", "hospital", "hotel", "ice", "ice cream", "india", "iron", "ivory", "jam", "jet", "jupiter", "kangaroo", "ketchup", "kid", "king", "kiwi", "knife", "knight", "lab", "lap", "laser", "lawyer", "lead", "lemon", "limousine", "leadlock", "log", "mammoth", "maple", "march", "mass", "mercury", "millionaire", "model", "mole", "moscow", "mouth", "mug", "needle", "net", "new york", "night", "note", "novel", "nurse", "nut", "oil", "olive", "olympus", "opera", "orange", "paper", "park", "part", "paste", "phoenix", "piano", "telescope", "teacher", "switch", "swing", "sub", "stick", "staff", "stadium", "sprint", "spike", "snowman", "slip", "shot", "shadow", "server", "ruler", "row", "rose", "root", "rome", "rock", "robot", "robin", "revolution", "rat", "racket", "queen", "press", "port", "pilot", "time", "tooth", "tower", "truck", "triangle", "trip", "turkey", "undertaker", "unicorn", "vacuum", "van", "wake", "wall", "war", "washer", "washington", "water", "wave", "well", "whale", "whip", "worm", "yard"];
-var wordsNed = ["preparee", "teleurstelling", "ambtenaar", "frietchinees", "fotoshoot", "kruidvat", "teddybeer", "tankstation", "zebra", "post", "roulette", "draak", "oorlog", "honing", "bom", "casino", "wolkenkrabber", "Saturnus", "astronaut", "zweep", "Antarctica", "sneeuwpop", "concert", "chocolade", "vliegtuig", "miljonair", "dinosaurus", "kameleon", "trompet", "pinguïn", "spin", "raket", "ambassade", "pistool", "ziekte", "spion", "prinses", "genie", "dief", "opera", "ridder", "stadion", "limousine", "spook", "bus", "lolly", "laser", "dood", "ziekenhuis", "ambulance", "inktvis", "helikopter", "kangoeroe", "microscoop", "pretpark", "superheld", "telescoop", "parachute", "vampier", "rotonde", "satelliet", "engel", "robot", "eenhoorn", "heks", "kolonist", "duiker", "gif", "brug", "vuur", "cobra", "walvis", "maan", "vis", "dokter", "kerk", "pleister", "zuster", "wind", "leeuw", "oog", "lucht", "konijn", "bank", "gras", "jurk", "dwerg", "bos", "auto", "handschoen", "appel", "olie", "kok", "beer", "poes", "leven", "geluk", "reus", "spiegel", "strand", "hotel", "water", "papier", "worm", "advocaat", "wetenschapper", "dans", "wortel", "ketchup", "nacht", "katoen", "voet", "muis", "mes", "theater", "agent", "schip", "piloot", "duim", "leraar", "fles", "dag", "koning", "glas", "kabel", "tand", "hond", "paard", "schoen", "stoel", "kroon", "ijs", "goud", "vork", "tijd", "fluit", "vlam", "sneeuw", "ivoor", "soldaat", "piramide", "kubus", "ster", "ring", "hoorn", "hart", "blok", "buis", "naald", "lijn", "krijt", "bord", "box", "scherm", "stuk", "spot", "knop", "mond", "etiket", "hand", "bed", "muur", "toren", "kaart", "bad", "diamant", "kruis", "net", "punt", "noot", "plaat", "hol", "wijzer", "kracht", "sleutel", "machine", "overgang", "stroom", "hoofd", "paal", "centrum", "ongeluk", "schat", "slot", "code", "cirkel", "link", "pijp", "Amsterdam", "Nederland", "Limburg", "Brussel", "Egypte", "Londen", "carnaval", "Rotterdam", "België", "hunebed", "Hollywood", "Griekenland", "Rome", "Ardennen", "ninja", "pool", "shoarma", "Duitsland", "provincie", "Amerika", "Atlantis", "Engeland", "loempia", "Afrika", "tablet", "Frankrijk", "klomp", "polder", "euro", "voetbal", "Zeeland", "Berlijn", "pizza", "dolfijn", "Hawaï", "motor", "laars", "caravan", "friet", "Alpen", "seizoen", "kamer", "blik", "vorst", "ijzer", "zegel", "licht", "mars", "groen", "jam", "Europa", "leiding", "wissel", "aarde", "straal", "deksel", "citroen", "roos", "tafel", "staart", "meter", "dijk", "batterij", "arena", "beeld", "kostuum", "slang", "spoor", "garen", "aandeel", "vet", "blond", "slip", "gemeente", "slag", "proef", "club", "schaduw", "bende", "strip", "tweeling", "band", "chip", "tocht", "duikboot", "mijn", "vink", "vlieg", "koud", "knikker", "spel", "haak", "knuppel", "ketting", "scheiding", "stapel", "bar", "bubbel", "pond", "rond", "veld", "hemel", "bok", "veer", "zink", "fiets", "schrift", "mat", "slee", "patroon", "grond", "rug", "stam", "munt", "graad", "kegel", "uitzending", "eikel", "mol", "geslacht", "tempel", "pompoen", "ijsbeer", "smokkelaar", "ham", "vlucht", "kruik", "val", "spreuk", "boek", "raad", "bal", "pil", "elf", "bureau", "arm", "schaal", "flits", "cel", "vulkaan", "contract", "chinees", "baan", "dierenarts", "haven", "golf", "nicht", "steek", "masker", "riet", "geluid", "prijs", "schroef", "havik", "pers", "formule", "as", "kuip", "viool", "regel", "dicht", "massa", "web", "zak", "palm", "kraan", "pasta", "taart", "gerecht", "spijker", "model", "weegschaal", "revolutie", "Parijs", "gas", "single", "piano", "bestand", "bron", "podium", "aanval", "asiel", "netwerk", "wedstrijd", "film", "schijf", "amazone", "ruimte", "beurs", "staf", "shuttle", "piraat", "kop", "stem", "gat", "kussen", "kamp", "ton", "spa", "pad", "figuur", "gezicht", "doos", "nagel", "pinda", "monster", "was", "recept", "toets", "tap", "school", "trommel", "kever", "kater", "tank", "koper", "schot", "hagel", "riem", "pupil", "oranje"]
+var wordsNed = ["kurk", "preparee", "teleurstelling", "ambtenaar", "frietchinees", "fotoshoot", "kruidvat", "teddybeer", "tankstation", "zebra", "post", "roulette", "draak", "oorlog", "honing", "bom", "casino", "wolkenkrabber", "Saturnus", "astronaut", "zweep", "Antarctica", "sneeuwpop", "concert", "chocolade", "vliegtuig", "miljonair", "dinosaurus", "kameleon", "trompet", "pinguïn", "spin", "raket", "ambassade", "pistool", "ziekte", "spion", "prinses", "genie", "dief", "opera", "ridder", "stadion", "limousine", "spook", "bus", "lolly", "laser", "dood", "ziekenhuis", "ambulance", "inktvis", "helikopter", "kangoeroe", "microscoop", "pretpark", "superheld", "telescoop", "parachute", "vampier", "rotonde", "satelliet", "engel", "robot", "eenhoorn", "heks", "kolonist", "duiker", "gif", "brug", "vuur", "cobra", "walvis", "maan", "vis", "dokter", "kerk", "pleister", "zuster", "wind", "leeuw", "oog", "lucht", "konijn", "bank", "gras", "jurk", "dwerg", "bos", "auto", "handschoen", "appel", "olie", "kok", "beer", "poes", "leven", "geluk", "reus", "spiegel", "strand", "hotel", "water", "papier", "worm", "advocaat", "wetenschapper", "dans", "wortel", "ketchup", "nacht", "katoen", "voet", "muis", "mes", "theater", "agent", "schip", "piloot", "duim", "leraar", "fles", "dag", "koning", "glas", "kabel", "tand", "hond", "paard", "schoen", "stoel", "kroon", "ijs", "goud", "vork", "tijd", "fluit", "vlam", "sneeuw", "ivoor", "soldaat", "piramide", "kubus", "ster", "ring", "hoorn", "hart", "blok", "buis", "naald", "lijn", "krijt", "bord", "box", "scherm", "stuk", "spot", "knop", "mond", "etiket", "hand", "bed", "muur", "toren", "kaart", "bad", "diamant", "kruis", "net", "punt", "noot", "plaat", "hol", "wijzer", "kracht", "sleutel", "machine", "overgang", "stroom", "hoofd", "paal", "centrum", "ongeluk", "schat", "slot", "code", "cirkel", "link", "pijp", "Amsterdam", "Nederland", "Limburg", "Brussel", "Egypte", "Londen", "carnaval", "Rotterdam", "België", "hunebed", "Hollywood", "Griekenland", "Rome", "Ardennen", "ninja", "pool", "shoarma", "Duitsland", "provincie", "Amerika", "Atlantis", "Engeland", "loempia", "Afrika", "tablet", "Frankrijk", "klomp", "polder", "euro", "voetbal", "Zeeland", "Berlijn", "pizza", "dolfijn", "Hawaï", "motor", "laars", "caravan", "friet", "Alpen", "seizoen", "kamer", "blik", "vorst", "ijzer", "zegel", "licht", "mars", "groen", "jam", "Europa", "leiding", "wissel", "aarde", "straal", "deksel", "citroen", "roos", "tafel", "staart", "meter", "dijk", "batterij", "arena", "beeld", "kostuum", "slang", "spoor", "garen", "aandeel", "vet", "blond", "slip", "gemeente", "slag", "proef", "club", "schaduw", "bende", "strip", "tweeling", "band", "chip", "tocht", "duikboot", "mijn", "vink", "vlieg", "koud", "knikker", "spel", "haak", "knuppel", "ketting", "scheiding", "stapel", "bar", "bubbel", "pond", "rond", "veld", "hemel", "bok", "veer", "zink", "fiets", "schrift", "mat", "slee", "patroon", "grond", "rug", "stam", "munt", "graad", "kegel", "uitzending", "eikel", "mol", "geslacht", "tempel", "pompoen", "ijsbeer", "smokkelaar", "ham", "vlucht", "kruik", "val", "spreuk", "boek", "raad", "bal", "pil", "elf", "bureau", "arm", "schaal", "flits", "cel", "vulkaan", "contract", "chinees", "baan", "dierenarts", "haven", "golf", "nicht", "steek", "masker", "riet", "geluid", "prijs", "schroef", "havik", "pers", "formule", "as", "kuip", "viool", "regel", "dicht", "massa", "web", "zak", "palm", "kraan", "pasta", "taart", "gerecht", "spijker", "model", "weegschaal", "revolutie", "Parijs", "gas", "single", "piano", "bestand", "bron", "podium", "aanval", "asiel", "netwerk", "wedstrijd", "film", "schijf", "amazone", "ruimte", "beurs", "staf", "shuttle", "piraat", "kop", "stem", "gat", "kussen", "kamp", "ton", "spa", "pad", "figuur", "gezicht", "doos", "nagel", "pinda", "monster", "was", "recept", "toets", "tap", "school", "trommel", "kever", "kater", "tank", "koper", "schot", "hagel", "riem", "pupil", "oranje"]
 var shuffledWords;
 var shuffledColors;
 
@@ -38,7 +38,6 @@ var team;
 
 
 // GAMELOGIC
-console.log('Nothing to see here ;)')
 
 // FUNCTION TOGGLE DARKMODE
 function toggleDarkmode() {
@@ -76,10 +75,11 @@ if (seed % 2 == 0) {
     team = "blue"
 }
 
-// SHUFFLE THE WORDSLISTS
+// SHUFFLE THE WORDSLISTS AND SHOW ROOM ID
 shuffledWordsEng = shuffle(wordsEng, seed);
 shuffledWordsNed = shuffle(wordsNed, seed);
 shuffledColors = shuffle(colors, seed);
+document.getElementById('winner').innerHTML = "spymaster room: " + seed;
 
 // IF USER HAS INPUT A SEED, START THE GAME
 if (seed != null) {
@@ -144,6 +144,7 @@ function render() {
     } else if (scoreRed == 0) {
         document.getElementById('winner').innerHTML = "red wins!"
     }
+    male = !male;
 }
 
 // FUNCTION TO SHOW ALL CARDS' COLOR
@@ -171,7 +172,7 @@ function hideCardsColor() {
     }
 }
 
-// LISTEN FOR A CLICK FROM THE USER
+// HANDLE CLICKS FROM THE USER
 document.addEventListener('click', function (click) {
     // TOGGLE SPYMASTER VIEW
     if (click.target.classList.contains('button') && click.target.classList.contains('spy') && spy === false) {
@@ -222,43 +223,61 @@ document.addEventListener('click', function (click) {
         click.target.innerHTML = "End " + team + "'s turn"
     }
 
+
     // HANDLE CARD CLICKING FOR PLAYERS
+
+    // SHOW CLICKED CARD'S COLOR
+
+    // RED
     if (click.target.classList.contains('card') && click.target.classList.contains('red')) {
+        document.getElementById('winner').innerHTML = "spymaster"
         if (scoreRed > 0 && !click.target.classList.contains('redVisible')) {
             if (team == "blue") {
                 team = "red";
             }
-            if (male == true) {
-                click.target.classList.add('redVisiblePlayer0');
-                male = !male;
-            } else if (male == false) {
-                click.target.classList.add('redVisiblePlayer1');
-                male = !male;
+            if (!click.target.classList.contains('hasGender')) {
+                if (male == true) {
+                    click.target.classList.add('redVisiblePlayer0');
+                } else if (male == false) {
+                    click.target.classList.add('redVisiblePlayer1');
+                }
             }
         }
         if (!click.target.classList.contains('redVisiblePlayer0')
             || !click.target.classList.contains('redVisiblePlayer1')) {
-            scoreRed -= 1;
+            if (!click.target.classList.contains('isClicked')) {
+                scoreRed -= 1;
+            }
         }
+        click.target.classList.add('hasGender');
+        click.target.classList.add('isClicked');
     }
+
+    // BLUE
     if (click.target.classList.contains('card') && click.target.classList.contains('blue')) {
         if (scoreBlue > 0 && !click.target.classList.contains('blueVisible')) {
             if (team == "red") {
                 team = "blue";
             }
-            if (male == true) {
-                click.target.classList.add('blueVisiblePlayer0');
-                male = !male;
-            } else if (male == false) {
-                click.target.classList.add('blueVisiblePlayer1');
-                male = !male;
+            if (!click.target.classList.contains('hasGender')) {
+                if (male == true) {
+                    click.target.classList.add('blueVisiblePlayer0');
+                } else if (male == false) {
+                    click.target.classList.add('blueVisiblePlayer1');
+                }
             }
         }
         if (!click.target.classList.contains('blueVisiblePlayer0')
             || !click.target.classList.contains('blueVisiblePlayer1')) {
-            scoreBlue -= 1;
+            if (!click.target.classList.contains('isClicked')) {
+                scoreBlue -= 1;
+            }
         }
+        click.target.classList.add('hasGender');
+        click.target.classList.add('isClicked');
     }
+
+    // WHITE
     if (click.target.classList.contains('card') && click.target.classList.contains('white')) {
         if (team == "blue") {
             team = "red";
@@ -267,12 +286,12 @@ document.addEventListener('click', function (click) {
         }
         if (male == true) {
             click.target.classList.add('whiteVisiblePlayer0');
-            male = !male;
         } else if (male == false) {
             click.target.classList.add('whiteVisiblePlayer1');
-            male = !male;
         }
     }
+
+    // BLACK
     if (click.target.classList.contains('card') && click.target.classList.contains('black')) {
         click.target.classList.add('blackVisiblePlayer1');
         if (team == "red") {
@@ -283,40 +302,42 @@ document.addEventListener('click', function (click) {
     }
 
     // HANDLE CARD CLICKING FOR SPYMASTERS
+
+    // SHOW CLICKED CARD'S COLOR
+
+    // RED
     if (click.target.classList.contains('redVisible') && spy == true) {
         if (male == true) {
             click.target.classList.add('redVisiblePlayer0');
-            male = !male;
         } else if (male == false) {
             click.target.classList.add('redVisiblePlayer1');
-            male = !male;
         }
     }
+
+    // BLUE
     if (click.target.classList.contains('blueVisible') && spy == true) {
         if (male == true) {
             click.target.classList.add('blueVisiblePlayer0');
-            male = !male;
         } else if (male == false) {
             click.target.classList.add('blueVisiblePlayer1');
-            male = !male;
         }
     }
+
+    // WHITE
     if (click.target.classList.contains('whiteVisible') && spy == true) {
         if (male == true) {
             click.target.classList.add('whiteVisiblePlayer0');
-            male = !male;
         } else if (male == false) {
             click.target.classList.add('whiteVisiblePlayer1');
-            male = !male;
         }
     }
+
+    // BLACK
     if (click.target.classList.contains('blackVisible') && spy == true) {
         if (male == true) {
             click.target.classList.add('blackVisiblePlayer0');
-            male = !male;
         } else if (male == false) {
             click.target.classList.add('blackVisiblePlayer1');
-            male = !male;
         }
     }
 
