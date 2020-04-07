@@ -1,3 +1,12 @@
+///////////////////////////////////////////////////////////////
+//         _________  ____  ______   _________________       //
+//        / __/ _ \ \/ /  |/  / _ | / __/_  __/ __/ _ \      //
+//       _\ \/ ___/\  / /|_/ / __ |_\ \  / / / _// , _/      //
+//      /___/_/    /_/_/  /_/_/ |_/___/ /_/ /___/_/|_|       //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+
 // VARS
 
 // WORDLISTS AND ASSIGNMENT OF SHUFFLED ARRAY
@@ -332,6 +341,7 @@ document.addEventListener('click', function (click) {
             document.getElementById('winner').innerHTML = "red wins!"
         }
     }
+
 
     // HANDLE CARD CLICKING FOR SPYMASTERS
 
