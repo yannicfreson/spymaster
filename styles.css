@@ -35,6 +35,9 @@
 
 .team {
   float: right;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
 }
 
 
@@ -53,6 +56,20 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+.explanation {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: justify;
+}
+
+.explanationDark {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: justify;
+} 
 
 .darkWinner {
   font-size: 45px;

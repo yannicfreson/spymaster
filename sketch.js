@@ -36,6 +36,9 @@ var male = false;
 // KEEP TRACK OF WHICH TEAM'S TURN IT IS
 var team;
 
+// IS THE HOW TO PLAY SHOWING?
+var showingExplanation = false;
+
 
 // GAMELOGIC
 
@@ -47,6 +50,8 @@ function toggleDarkmode() {
         document.getElementById('winner').classList.add('darkWinner')
         document.getElementById('dash').classList.remove('dash')
         document.getElementById('dash').classList.add('darkDash')
+        document.getElementById('explanation').classList.remove('explanation')
+        document.getElementById('explanation').classList.add('explanationDark')
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.add('dark');
         }
@@ -56,6 +61,8 @@ function toggleDarkmode() {
         document.getElementById('winner').classList.add('winner')
         document.getElementById('dash').classList.remove('darkDash')
         document.getElementById('dash').classList.add('dash')
+        document.getElementById('explanation').classList.remove('explanationDark')
+        document.getElementById('explanation').classList.add('explanation')
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.remove('dark');
         }
@@ -68,11 +75,16 @@ if (seed % 2 == 0) {
     scoreRed = 9;
     scoreBlue = 8;
     team = "red";
+    document.getElementById('team').style.backgroundColor = "#c73535"
+    document.getElementById('team').style.border = "#c73535"
 } else if (seed % 2 != 0) {
     colors = colors1;
     scoreRed = 8;
     scoreBlue = 9;
     team = "blue"
+    document.getElementById('team').style.backgroundColor = "#3f77da"
+    document.getElementById('team').style.border = "#3f77da"
+
 }
 
 // SHUFFLE THE WORDSLISTS AND SHOW ROOM ID
@@ -143,6 +155,11 @@ function render() {
         document.getElementById('winner').innerHTML = "blue wins!"
     } else if (scoreRed == 0) {
         document.getElementById('winner').innerHTML = "red wins!"
+    }
+    if (team == "blue") {
+        document.getElementById('team').style.backgroundColor = "#3f77da"
+    } else if (team == "red") {
+        document.getElementById('team').style.backgroundColor = "#c73535"
     }
     male = !male;
 }
@@ -215,6 +232,15 @@ document.addEventListener('click', function (click) {
         toggleDarkmode();
     }
 
+    // TOGGLE HOW TO PLAY
+    if (click.target.classList.contains('howToPlay') && showingExplanation == false) {
+        document.getElementById('explanation').innerHTML = "Start a video call with the other players where one person shares their screen showing the board. That person will also click on the cards so the others can see the game. After that the other players may update their own board by clicking on that card. The spymasters of each team click on the Spymaster View button and hide their board from the others."
+        showingExplanation = true
+    } else if (click.target.classList.contains('howToPlay') && showingExplanation == true) {
+        document.getElementById('explanation').innerHTML = ""
+        showingExplanation = false
+    }
+
     // TOGGLE TEAMS
     if (click.target.classList.contains('team') && team == "red") {
         team = "blue";
@@ -223,6 +249,8 @@ document.addEventListener('click', function (click) {
         team = "red";
         click.target.innerHTML = "End " + team + "'s turn"
     }
+
+    // SHOW HOW TO PLAY
 
 
     // HANDLE CARD CLICKING FOR PLAYERS
