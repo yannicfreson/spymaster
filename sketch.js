@@ -245,7 +245,7 @@ document.addEventListener('click', function (click) {
 
     // TOGGLE HOW TO PLAY
     if (click.target.classList.contains('howToPlay') && showingExplanation == false) {
-        document.getElementById('explanation').innerHTML = "Start a video call with the other players where one person shares their screen showing the board. That person will also click on the cards so the others can see the game. The spymasters also open this website and turn on Spymaster View and hide their board from the others."
+        document.getElementById('explanation').innerHTML = "Start a video call with the other players where one person shares their screen showing the board. That person will also click on the cards so the others can see the game. The spymasters also open this website and turn on Spymaster View and hide their board from the others. \n Official rules: https://czechgames.com/files/rules/codenames-rules-en.pdf"
         showingExplanation = true
     } else if (click.target.classList.contains('howToPlay') && showingExplanation == true) {
         document.getElementById('explanation').innerHTML = ""
