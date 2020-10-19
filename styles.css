@@ -204,6 +204,10 @@ body {
   /* overflow: hidden; */
 }
 
+a {
+  color: white;
+}
+
 a:hover{
   color: #c7c7c7;
 }
