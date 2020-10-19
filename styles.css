@@ -203,3 +203,11 @@ body {
   background-color: #202225;
   /* overflow: hidden; */
 }
+
+a:hover{
+  color: #c7c7c7;
+}
+
+a:visited {
+  color: white;
+}
