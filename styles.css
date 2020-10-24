@@ -9,29 +9,27 @@
   height: 570px;
 }
 
-
 .preloadImages0 {
-  background-image: url('res/red0.png');
+  background-image: url("res/red0.png");
 }
 .preloadImages1 {
-  background-image: url('res/red1.png');
+  background-image: url("res/red1.png");
 }
 .preloadImages2 {
-  background-image: url('res/blue0.png');
+  background-image: url("res/blue0.png");
 }
 .preloadImages3 {
-  background-image: url('res/blue1.png');
+  background-image: url("res/blue1.png");
 }
 .preloadImages4 {
-  background-image: url('res/white0.png');
+  background-image: url("res/white0.png");
 }
 .preloadImages5 {
-  background-image: url('res/white1.png');
+  background-image: url("res/white1.png");
 }
 .preloadImages6 {
-  background-image: url('res/black1.png');
+  background-image: url("res/black1.png");
 }
-
 
 .team {
   float: right;
@@ -39,7 +37,6 @@
   color: white;
   font-size: 15px;
 }
-
 
 .scoreDash {
   color: black;
@@ -56,7 +53,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 .explanation {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
@@ -69,7 +65,7 @@
   font-size: 16px;
   color: white;
   text-align: justify;
-} 
+}
 
 .darkWinner {
   font-size: 45px;
@@ -85,8 +81,8 @@
   text-transform: uppercase;
   color: black;
   display: table;
-  margin: 0 auto;}
-
+  margin: 0 auto;
+}
 
 .card {
   color: black;
@@ -109,7 +105,6 @@
   border: 1px solid black;
 }
 
-
 .dark {
   color: #b7babd;
   background-color: #36393f;
@@ -121,7 +116,6 @@
 .darkDash {
   color: #b7babd;
 }
-
 
 .red {
   font-size: 16px;
@@ -136,68 +130,63 @@
   font-size: 16px;
 }
 .visible {
-  color: black
+  color: black;
 }
-
 
 .redVisible {
   background-image: radial-gradient(#c73535, #722020);
   color: white;
 }
 .redVisiblePlayer0 {
-  background-image: url('res/red0.png');
+  background-image: url("res/red0.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
 .redVisiblePlayer1 {
-  background-image: url('res/red1.png');
+  background-image: url("res/red1.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
-
 
 .blueVisible {
   background-image: radial-gradient(#3f77da, #254885);
   color: white;
 }
 .blueVisiblePlayer0 {
-  background-image: url('res/blue0.png');
+  background-image: url("res/blue0.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
 .blueVisiblePlayer1 {
-  background-image: url('res/blue1.png');
+  background-image: url("res/blue1.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
 
-
 .whiteVisible {
-  background-image: radial-gradient( #ffffff, #c0c0c0);
+  background-image: radial-gradient(#ffffff, #c0c0c0);
   color: #505050;
 }
 .whiteVisiblePlayer0 {
-  background-image: url('res/white0.png');
+  background-image: url("res/white0.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
 .whiteVisiblePlayer1 {
-  background-image: url('res/white1.png');
+  background-image: url("res/white1.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
-
 
 .blackVisible {
   background-image: radial-gradient(#333333, #000000);
   color: #c7c7c7;
 }
 .blackVisiblePlayer1 {
-  background-image: url('res/black1.png');
+  background-image: url("res/black1.png");
   background-size: contain;
   color: rgba(255, 255, 255, 0);
 }
-
 
 body {
   background-color: #202225;
@@ -208,10 +197,30 @@ a {
   color: white;
 }
 
-a:hover{
+a:hover {
   color: #c7c7c7;
 }
 
 a:visited {
   color: white;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: justify;
+  margin-right: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
 }
